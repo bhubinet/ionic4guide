@@ -1,5 +1,5 @@
 # Guide Ionic 4
-This guide will register tips or problems that you can encounter during your app development.
+This guide will register tips or problems that you can encounter during your app development. **All the guide is available in Wiki.**
 
 
 # Improve your application
