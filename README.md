@@ -45,8 +45,15 @@ I encountered a problem using ngx-translate, it's that we have to import the Tra
 })
 ```
 
+## BugReport : ActionSheet in IOS not scrollable
+There is a bug in Ionic 4 when you use an action sheet in ios with a list. This list is not scrollable. To avoid this add this to your global.scss :
+```scss
+.action-sheet-group {
+    overflow: auto !important;
+}
+```
 
-# Tips
+
 ## Variables SCSS and Dynamic theming
 Recently the trending is to let the choice of colors theming to the user. To do this we'll use SCSS variables with Ionic 4.
 Many variables are already set by default :
