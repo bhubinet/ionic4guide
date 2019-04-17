@@ -54,6 +54,16 @@ There is a bug in Ionic 4 when you use an action sheet in ios with a list. This 
 }
 ```
 
+## Disable ion-refresher when scroll a content
+If you have a scrollable element in your page, for example a grid, when you scroll up your grid, your refresh will trigger at the same time. To avoid that add [disabled] at your refresher with a boolean variable.
+```html
+<ion-refresher (ionRefresh)="doRefresh($event)" [pullMin]="60" [disabled]="refresherEnable">
+```
+And switch the state with (touchstart) and (touchend) attribute in your scrollable content : 
+```html
+<ion-grid style="max-height: 380px" (touchstart)="refresherEnable = true" (touchend)="refresherEnable = false">
+```
+
 
 # Variables SCSS and Dynamic theming
 Recently the trending is to let the choice of colors theming to the user. To do this we'll use SCSS variables with Ionic 4.
