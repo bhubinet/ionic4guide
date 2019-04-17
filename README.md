@@ -1,5 +1,6 @@
 # Guide Ionic 4
 This guide will register tips or problems that you can encounter during your app development. **All the guide is available in Wiki.**
+I will register here all my experiences during the differents applications that i'll make in Ionic 4. I'm a young developper from France (so forgive me for my english's mistakes).
 
 
 # Improve your application
