@@ -138,3 +138,17 @@ So we will create our service to make 2 themes : a light theme and a dark theme.
     }
 ```
 It's done we can switch between themes with an ion-toggle for example ;-)
+
+# Javascript blocks (alaways useful)
+## Sort json array (by date for example)
+```javascript
+    sortByKey(array, key) {
+        return array.sort(function(a, b) {
+            let x = a[key]; let y = b[key];
+            x = new Date(x.date);
+            y = new Date(y.date);
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+    }
+```
+So you pass your array and the key of your choice to sort. You can format your keys before comparing them.
