@@ -152,3 +152,9 @@ It's done we can switch between themes with an ion-toggle for example ;-)
     }
 ```
 So you pass your array and the key of your choice to sort. You can format your keys before comparing them.
+## Replace characters or words with replace()
+The function replace() provided by Prototype.String only replace the first occurence by default. To skip this constraint :
+```javascript
+const date = $event.replace(/-/g, '/');
+```
+Use g after your replace to loop each occurence.
