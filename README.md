@@ -61,8 +61,9 @@ If you have a scrollable element in your page, for example a grid, when you scro
 ```
 And switch the state with (touchstart) and (touchend) attribute in your scrollable content : 
 ```html
-<ion-grid style="max-height: 380px" (touchstart)="refresherEnable = true" (touchend)="refresherEnable = false">
+<ion-grid style="max-height: 380px" (touchstart)="refresherEnable = true; e.preventDefault()" (touchend)="refresherEnable = false; e.preventDefault()">
 ```
+Don't forget "e.preventDefault()" if you have a click event in your scrollable content.
 
 
 # Variables SCSS and Dynamic theming
