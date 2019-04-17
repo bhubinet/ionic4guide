@@ -55,7 +55,7 @@ There is a bug in Ionic 4 when you use an action sheet in ios with a list. This 
 ```
 
 
-## Variables SCSS and Dynamic theming
+# Variables SCSS and Dynamic theming
 Recently the trending is to let the choice of colors theming to the user. To do this we'll use SCSS variables with Ionic 4.
 Many variables are already set by default :
 ```scss
