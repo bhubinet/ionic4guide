@@ -46,7 +46,7 @@ I encountered a problem using ngx-translate, it's that we have to import the Tra
 ```
 
 ## BugReport : ActionSheet in IOS not scrollable
-There is a bug in Ionic 4 when you use an action sheet in ios with a list. This list is not scrollable. To avoid this add this to your global.scss :
+There is a bug in Ionic 4 when you use an action sheet in ios with a list. This list is not scrollable. To avoid that add to your global.scss :
 ```scss
 .action-sheet-group {
     overflow: auto !important;
