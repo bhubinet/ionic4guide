@@ -65,6 +65,49 @@ And switch the state with (touchstart) and (touchend) attribute in your scrollab
 ```
 Don't forget "e.preventDefault()" if you have a click event in your scrollable content.
 
+## No provider for e! (with --prod flag)
+3 Days to resolve this error ! Since Ionic 4 you have to declare all your @ionic-native in app.module.ts.
+So go to package.json and get all your native plugins.
+```json
+"@ionic-native/calendar": "^5.2.0",
+    "@ionic-native/camera": "^5.2.0",
+    "@ionic-native/core": "^5.0.0",
+    "@ionic-native/date-picker": "^5.2.0",
+    "@ionic-native/file": "^5.2.0",
+    "@ionic-native/file-opener": "^5.2.0",
+    "@ionic-native/file-transfer": "^5.2.0",
+    "@ionic-native/native-page-transitions": "^5.2.0",
+    "@ionic-native/network": "^5.3.0",
+    "@ionic-native/screen-orientation": "^5.1.0",
+    "@ionic-native/splash-screen": "^5.0.0",
+    "@ionic-native/status-bar": "^5.0.0",
+    "@ionic-native/toast": "^5.2.0",
+```
+And now declare them in app.module.ts :
+```javascript
+  providers: [
+    StatusBar,
+    SplashScreen,
+    ScreenOrientation,
+    File,
+    UserService,
+    FormatterService,
+    ApiService,
+    FiltersService,
+    PicturesService,
+    ThemeSwitcherService,
+    Network,
+    Camera,
+    DatePicker,
+    FileTransfer,
+    FileOpener,
+    NativePageTransitions,
+    Toast,
+    Calendar,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+```  
+
 
 # Variables SCSS and Dynamic theming
 Recently the trending is to let the choice of colors theming to the user. To do this we'll use SCSS variables with Ionic 4.
