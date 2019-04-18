@@ -182,7 +182,7 @@ So we will create our service to make 2 themes : a light theme and a dark theme.
 ```
 It's done we can switch between themes with an ion-toggle for example ;-)
 
-# Javascript blocks (alaways useful)
+# Javascript blocks (always useful)
 ## Sort json array (by date for example)
 ```javascript
     sortByKey(array, key) {
