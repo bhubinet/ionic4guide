@@ -4,6 +4,11 @@ I will register here all my experiences during the differents applications that 
 
 
 # Improve your application
+## Test your app in IOS (or Android) with DevApp
+Ionic have an application downloadable in [IOS](https://itunes.apple.com/us/app/ionic-devapp/id1233447133?ls=1&mt=8) and [Android](https://play.google.com/store/apps/details?id=io.ionic.devapp&hl=en) which allow you to test your app directly in device pass by the wifi connection. Once you download the app, connect your device to the same wifi connection of your pc and launch :
+```bash
+ionic serve -devapp
+```
 ## Make a production build
 The default build command will generate a debug apk which does not have optimized code.
 
@@ -30,6 +35,14 @@ You have to use LocalStorage only if needed. If possible use more a database, a 
 
 
 # Problems
+## Date format in IOS
+If you play with specific format of dates you'll face to a problem in IOS : the default format is not the same that in Android.
+But we can convert them and dates will work in IOS and Android both : 
+```javascript
+const arr = planif.start.date.split(/[- :]/);
+const dateArr = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
+const startdate = new Date(dateArr);
+```              
 ## Translate I18n
 I encountered a problem using ngx-translate, it's that we have to import the TranslateModule in each page that you use the pipe (|translate).
 ```javascript
