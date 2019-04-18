@@ -63,7 +63,7 @@ And switch the state with (touchstart) and (touchend) attribute in your scrollab
 ```html
 <ion-grid style="max-height: 380px" (touchstart)="refresherEnable = true; e.preventDefault()" (touchend)="refresherEnable = false; e.preventDefault()">
 ```
-Don't forget "e.preventDefault()" if you have a click event in your scrollable content.
+Don't forget "e.preventDefault()" if you have a click event in your scrollable content. e.preventDefault() can cause problems when you build in production. Nowadays I didn't fix that problem.
 
 ## No provider for e! (with --prod flag)
 3 Days to resolve this error ! Since Ionic 4 you have to declare all your @ionic-native in app.module.ts.
