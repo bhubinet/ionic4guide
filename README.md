@@ -72,7 +72,7 @@ The error has thrown when the platforms/ios/ios.json file is conflicting to the 
 
 To resolve this issue, remove *-Info.plist key and its value in platforms/ios/ios.json and do :
 ```bash
-cordova prepare ios again.
+cordova prepare ios
 ```
 
 ## Disable ion-refresher when scroll a content
