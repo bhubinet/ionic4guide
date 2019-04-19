@@ -70,7 +70,10 @@ There is a bug in Ionic 4 when you use an action sheet in ios with a list. This 
 ## doc.find is not a function (ionic cordova build ios --prod)
 The error has thrown when the platforms/ios/ios.json file is conflicting to the config.xml.
 
-To resolve this issue, remove *-Info.plist key and its value in platforms/ios/ios.json and do cordova prepare ios again.
+To resolve this issue, remove *-Info.plist key and its value in platforms/ios/ios.json and do :
+```bash
+cordova prepare ios again.
+```
 
 ## Disable ion-refresher when scroll a content
 If you have a scrollable element in your page, for example a grid, when you scroll up your grid, your refresh will trigger at the same time. To avoid that add [disabled] at your refresher with a boolean variable.
